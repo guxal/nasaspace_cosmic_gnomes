@@ -1,0 +1,73 @@
+[
+	{
+		"min": 16 ,
+		"max": 120,
+		"data":{
+			"radius" : [6.6, null],
+			"luminosity" : [30000, null],
+			"temperature" : [33000, null],
+			"color" : "blue"
+		}
+	},
+	{
+		"min": 2.1 ,
+		"max": 16,
+		"data":{
+			"radius" : [1.8, 6.6],
+			"luminosity" : [25, 30000],
+			"temperature" : [10000, 33000],
+			"color" : "whiteblue"
+		}
+	},
+	{
+		"min": 1.4 ,
+		"max": 2.1,
+		"data":{
+			"radius" : [1.4, 1.8],
+			"luminosity" : [5, 25],
+			"temperature" : [7500, 10000],
+			"color" : "white"
+		}
+	},
+	{
+		"min": 1.04,
+		"max": 1.4,
+		"data":{
+			"radius" : [1.15, 1.4],
+			"luminosity" : [1.5, 5],
+			"temperature" : [6000, 7500],
+			"color" : "whiteyellow"
+		}
+	},
+	{
+		"min": 0.8,
+		"max": 1.04,
+		"data":{
+			"radius" : [0.96, 1.15],
+			"luminosity" : [0.6, 1.5],
+			"temperature" : [5200, 6000],
+			"color" : "yellow"
+		}
+	},
+	{
+		"min": 0.45,
+		"max": 0.8,
+		"data":{
+			"radius" : [0.7, 0.96],
+			"luminosity" : [0.08, 0.6],
+			"temperature" : [3700, 5200],
+			"color" : "orange"
+		}
+	},
+	{
+		"min": 0,
+		"max": 0.45,
+		"data":{
+			"radius" : [0.01, 0.7],
+			"luminosity" : [0.01, 0.08],
+			"temperature" : [100, 3700],
+			"color" : "red"
+		}
+	}
+
+]
