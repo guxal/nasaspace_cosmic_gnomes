@@ -17,3 +17,8 @@ _global_script_class_icons={
 
 config/name="SpaceNovel"
 run/main_scene="res://LooneyLips.tscn"
+
+[display]
+
+window/size/resizable=false
+window/size/fullscreen=true
