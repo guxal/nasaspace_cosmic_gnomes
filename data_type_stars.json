@@ -1,0 +1,26 @@
+[
+    {
+        "name": "hipergiants",
+        "masa": [50, 120]
+    },
+    {
+        "name": "Supergiants",
+        "masa": [15, 50]
+    },
+    {
+        "name": "giants",
+        "masa": [5, 15]
+    },
+    {
+        "name": "subgiants",
+        "masa": [1.5, 5]
+    },
+    {
+        "name": "dwarfs",
+        "masa": [0.08, 1.5]
+    },
+    {
+        "name": "white dwarfs",
+        "masa": [0.01, 0.08]
+    }
+]
