@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/sol.obj-a9c331c5e74ee32cf964e3b7c9733ed2.mesh"
+
+[deps]
+
+files=[ "res://.import/sol.obj-a9c331c5e74ee32cf964e3b7c9733ed2.mesh" ]
+
+source_file="res://sol/sol.obj"
+dest_files=[ "res://.import/sol.obj-a9c331c5e74ee32cf964e3b7c9733ed2.mesh", "res://.import/sol.obj-a9c331c5e74ee32cf964e3b7c9733ed2.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

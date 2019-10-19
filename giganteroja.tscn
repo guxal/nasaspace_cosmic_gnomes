@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sol/carpe.jpg" type="Texture" id=1]
+[ext_resource path="res://sol/carpeNOrmal.png" type="Texture" id=2]
+
+[sub_resource type="SphereMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 1, 0.560784, 0, 1 )
+albedo_texture = ExtResource( 1 )
+emission_enabled = true
+emission = Color( 1, 0, 0, 1 )
+emission_energy = 0.6
+emission_operator = 1
+emission_on_uv2 = false
+emission_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.54
+normal_texture = ExtResource( 2 )
+
+[sub_resource type="SphereShape" id=3]
+
+[node name="roja" type="Spatial"]
+
+[node name="RigidBody" type="RigidBody" parent="."]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+gravity_scale = 0.0
+
+[node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+shape = SubResource( 3 )
