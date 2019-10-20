@@ -25,13 +25,15 @@ onready var input = $text_input/input
 onready var slider = $slider/slider
 onready var enter = $enter
 
+export var ready = false
 
-var star_data = {
+export var star_data = {
 	"name": "Alpha Centauri",
 	"mass": "2400 Sun masses",
 	"temperature": "1200 degrees",
 	"luminosity": "3..",
-	"radius": "120000"
+	"radius": "120000",
+	"type": "Dwarf"
 } 
 
 func _ready():
@@ -44,6 +46,7 @@ func _ready():
 	
 	$slider.visible = false
 	enter.visible = false
+	
 	$HTTPRequest.request("http://144.202.115.196/nasaspaceapp/data_type_stars.json")
 	$HTTPRequest2.request("http://144.202.115.196/nasaspaceapp/data_stars.json")
 	set_text()
@@ -65,7 +68,6 @@ func _process(delta):
 			set_color(1)
 
 func is_action_enter():
-	print(index)
 	if index == 1:
 		var s = input.text
 		if len(s) != 0:
@@ -74,6 +76,7 @@ func is_action_enter():
 			set_text()
 			mode = "in"
 			t = 0
+			$hit.play()
 	elif index == 2:
 		var val = slider.value
 		star_data["mass"] = str(val)
@@ -90,9 +93,9 @@ func is_action_enter():
 		slider.value = d.temperature[0] + ((d.temperature[1] - d.temperature[0]) / 2) if d.temperature[1] != null else d.temperature[0] + (((d.temperature[0] * 2) - d.temperature[0]) / 2) 
 		MIN.text = String(slider.min_value) + " Kv"
 		MAX.text = String(slider.max_value) + " Kv"
-		
 		val = 0
 		set_text()
+		$hit.play()
 	elif index == 3:
 		# se deben crear nuevos valores minimos y maximos basandonos en los 
 		# datos de la tabla general
@@ -112,6 +115,7 @@ func is_action_enter():
 		set_text()
 		t = 0
 		mode = "in"
+		$hit.play()
 	elif index == 4:
 		var val = slider.value
 		star_data["luminosity"] = str(val)
@@ -128,6 +132,7 @@ func is_action_enter():
 		set_text()
 		mode = "in"
 		t = 0
+		$hit.play()
 	elif index == 5:
 		var val = slider.value
 		star_data["radius"] = str(val)
@@ -137,7 +142,10 @@ func is_action_enter():
 		set_text()
 		mode = "in"
 		t = 0
-			
+		$hit.play()
+	elif index == 6:
+		$hit.play()
+		ready = true
 func fadein(delta):
 	if mode == "in":
 		set_color(t / DELAY)
@@ -220,3 +228,5 @@ func _on_slider_value_changed(value):
 	NAME_STAR_DB.text = star_data["name"]+" is "+get_star(value)
 	VALUE.text = String(value)
 
+func delete():
+	queue_free()
