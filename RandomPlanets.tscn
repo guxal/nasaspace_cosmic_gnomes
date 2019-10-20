@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://textures/21-endor/endor.jpg" type="Texture" id=1]
+[ext_resource path="res://MeshInstances.gd" type="Script" id=2]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 1 )
+emission_enabled = true
+emission = Color( 0, 0, 0, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+emission_texture = ExtResource( 1 )
+
+[sub_resource type="SphereMesh" id=1]
+
+[sub_resource type="ImageTexture" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_transparent = true
+albedo_texture = ExtResource( 1 )
+roughness_texture = SubResource( 2 )
+
+[node name="RandomPlanets" type="Spatial"]
+
+[node name="body" type="RigidBody" parent="."]
+gravity_scale = 0.0
+can_sleep = false
+
+[node name="cuerpo" type="MeshInstance" parent="body"]
+material_override = SubResource( 4 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Radius" type="HSlider" parent="."]
+margin_left = 217.0
+margin_top = 505.0
+margin_right = 816.0
+margin_bottom = 527.0
+min_value = 1.0
+max_value = 10.0
+step = 0.1
+value = 1.0
+ticks_on_borders = true
+[connection signal="value_changed" from="Radius" to="body/cuerpo" method="_on_Radius_value_changed"]

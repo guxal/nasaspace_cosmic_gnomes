@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tattooine.obj-007be94c27dabe7aae9ca42bca99ca89.mesh"
+
+[deps]
+
+files=[ "res://.import/tattooine.obj-007be94c27dabe7aae9ca42bca99ca89.mesh" ]
+
+source_file="res://textures/Kepler-186 f/tattooine.obj"
+dest_files=[ "res://.import/tattooine.obj-007be94c27dabe7aae9ca42bca99ca89.mesh", "res://.import/tattooine.obj-007be94c27dabe7aae9ca42bca99ca89.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

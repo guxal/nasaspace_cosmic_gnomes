@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/endor.obj-01ba359a707edab1ff73cba7a58a5a63.mesh"
+
+[deps]
+
+files=[ "res://.import/endor.obj-01ba359a707edab1ff73cba7a58a5a63.mesh" ]
+
+source_file="res://textures/21-endor/endor.obj"
+dest_files=[ "res://.import/endor.obj-01ba359a707edab1ff73cba7a58a5a63.mesh", "res://.import/endor.obj-01ba359a707edab1ff73cba7a58a5a63.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

@@ -1,0 +1,68 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 29.07.2018 21:12:54
+
+newmtl browner
+	Ns 25.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.2183 0.1190 0.0641
+	Kd 0.6549 0.3569 0.1922
+	Ks 0.0450 0.0450 0.0450
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ideac\Desktop\endor.jpg
+	map_Kd C:\Users\ideac\Desktop\endor.jpg
+	map_bump C:\Users\ideac\Desktop\endor.jpg
+	bump C:\Users\ideac\Desktop\endor.jpg
+
+newmtl Material__1
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.1529 0.2471 0.3647
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.5310 0.5310 0.5310
+	Ke 0.0000 0.0000 0.0000
+	map_Ks C:\Users\ideac\Desktop\Opacity.jpg
+	map_d C:\Users\ideac\Desktop\Opacity.jpg
+	map_bump C:\Users\ideac\Desktop\Opacity.jpg
+	bump C:\Users\ideac\Desktop\Opacity.jpg
+
+newmtl atmosphere
+	Ns 0.0000
+	Ni 1.5000
+	d 0.0000
+	Tr 1.0000
+	Tf 0.0000 0.0000 0.0000 
+	illum 2
+	Ka 0.1000 0.1000 0.1000
+	Kd 0.5000 0.5000 0.5000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Map__14_Gradient_Ramp.tga
+	map_Kd Map__14_Gradient_Ramp.tga
+	map_Ke Map__15_Falloff.tga
+	map_d Map__13_Gradient_Ramp.tga
+
+newmtl moon_terrain
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.4392 0.4392 0.4392
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ideac\Desktop\moon.jpg
+	map_Kd C:\Users\ideac\Desktop\moon.jpg
+	map_Ke Map__27_Falloff.tga
+	map_bump C:\Users\ideac\Desktop\moon.jpg
+	bump C:\Users\ideac\Desktop\moon.jpg
+	map_bump C:\Users\ideac\Desktop\moon.jpg

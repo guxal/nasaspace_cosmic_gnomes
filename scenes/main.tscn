@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://Space.jpg" type="Texture" id=2]
 [ext_resource path="res://audio/455855__andrewkn__wandering.wav" type="AudioStream" id=3]
 [ext_resource path="res://fonts/cosmic_font_enter.tres" type="DynamicFont" id=4]
+[ext_resource path="res://cosmic.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="PanoramaSky" id=1]
 radiance_size = 1
@@ -13,6 +14,10 @@ panorama = ExtResource( 2 )
 background_mode = 2
 background_sky = SubResource( 1 )
 background_sky_custom_fov = 103.9
+
+[sub_resource type="DynamicFont" id=3]
+size = 52
+font_data = ExtResource( 5 )
 
 [node name="MainNode" type="Spatial"]
 script = ExtResource( 1 )
@@ -83,15 +88,32 @@ custom_fonts/font = ExtResource( 4 )
 text = "Star Type: "
 valign = 1
 
+[node name="end" type="PanelContainer" parent="."]
+visible = false
+margin_left = 15.0
+margin_top = 11.0
+margin_right = 1018.0
+margin_bottom = 597.0
+
+[node name="Label" type="Label" parent="end"]
+margin_left = 7.0
+margin_top = 157.0
+margin_right = 996.0
+margin_bottom = 429.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.894118, 0.843137, 0.0431373, 1 )
+text = "Your system will live through the ages...
+
+Thanks for playing!
+
+(Galactic updates coming soon)"
+align = 1
+
 [node name="info2" type="PanelContainer" parent="."]
-editor/display_folded = true
 margin_left = 576.0
 margin_top = 16.31
 margin_right = 1017.0
 margin_bottom = 103.31
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="label" type="Label" parent="info2"]
 margin_left = 7.0
@@ -111,3 +133,5 @@ margin_right = 968.18
 margin_bottom = 567.799
 custom_fonts/font = ExtResource( 4 )
 text = "[ENTER]"
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
