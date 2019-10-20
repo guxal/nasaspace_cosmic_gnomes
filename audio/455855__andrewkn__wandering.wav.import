@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/455855__andrewkn__wandering.wav-8a9b7c6ca85c6fc3790e52e1d09c2d0a.sample"
+
+[deps]
+
+source_file="res://audio/455855__andrewkn__wandering.wav"
+dest_files=[ "res://.import/455855__andrewkn__wandering.wav-8a9b7c6ca85c6fc3790e52e1d09c2d0a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

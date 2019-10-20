@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://sol/Water_001_COLOR.jpg" type="Texture" id=1]
+[ext_resource path="res://sol/waterMap.png" type="Texture" id=2]
+[ext_resource path="res://scripts/MeshInstance.gd" type="Script" id=3]
+[ext_resource path="res://kenney_particlePack/PNG/spark_04.png" type="Texture" id=4]
+
+[sub_resource type="SphereMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0, 0.976471, 1, 1 )
+albedo_texture = ExtResource( 1 )
+emission_enabled = true
+emission = Color( 0, 0.529412, 0.588235, 1 )
+emission_energy = 1.0
+emission_operator = 1
+emission_on_uv2 = true
+emission_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 2.76
+normal_texture = ExtResource( 2 )
+
+[sub_resource type="SphereShape" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_color = Color( 0.0470588, 0.556863, 0.827451, 1 )
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 70.0
+angular_velocity_random = 1.0
+scale = 4.5
+
+[sub_resource type="QuadMesh" id=6]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="RigidBody" type="RigidBody" parent="."]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
+gravity_scale = 0.0
+
+[node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 4 )
+shape = SubResource( 3 )
+
+[node name="Particles" type="Particles" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.246023, 0.0946548 )
+material_override = SubResource( 4 )
+process_material = SubResource( 5 )
+draw_pass_1 = SubResource( 6 )

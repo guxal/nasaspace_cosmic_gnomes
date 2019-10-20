@@ -1,0 +1,175 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/LooneyLips.gd" type="Script" id=1]
+[ext_resource path="res://gfx/BG.png" type="Texture" id=2]
+[ext_resource path="res://fonts/cosmic_font_text.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/cosmic_font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/cosmic_font_enter.tres" type="DynamicFont" id=5]
+[ext_resource path="res://audio/Sound Button.wav" type="AudioStream" id=6]
+
+[node name="VisualNobel" type="Control"]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_vertical_guides_": [ 510.0 ]
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -4.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="text" type="VBoxContainer" parent="."]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = -30.0
+margin_right = -24.0
+margin_bottom = -102.0
+alignment = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="DisplayText" type="Label" parent="text"]
+margin_top = 64.0
+margin_right = 976.0
+margin_bottom = 464.0
+rect_min_size = Vector2( 400, 400 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_constants/line_spacing = 19
+text = "Place Holder Text
+sdfsdfsdf
+sdfsdfsdf
+sdfsd"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="text_input" type="VBoxContainer" parent="."]
+editor/display_folded = true
+margin_left = 250.0
+margin_top = 500.0
+margin_right = 750.0
+margin_bottom = 550.0
+
+[node name="input" type="LineEdit" parent="text_input"]
+margin_right = 500.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 500, 50 )
+rect_pivot_offset = Vector2( 250, 25 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/clear_button_color_pressed = Color( 0, 0, 0, 1 )
+align = 1
+placeholder_text = "Alfa Centauri"
+placeholder_alpha = 0.25
+caret_blink = true
+
+[node name="slider" type="VBoxContainer" parent="."]
+editor/display_folded = true
+margin_left = 213.0
+margin_top = 443.0
+margin_right = 813.0
+margin_bottom = 570.0
+rect_pivot_offset = Vector2( 300, 50 )
+alignment = 1
+
+[node name="name_star" type="Label" parent="slider"]
+margin_right = 600.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 300, 20 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.992157, 0.843137, 0.333333, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "NAME STAR"
+align = 1
+
+[node name="value" type="Label" parent="slider"]
+margin_top = 56.0
+margin_right = 600.0
+margin_bottom = 72.0
+custom_fonts/font = ExtResource( 5 )
+text = "value"
+align = 1
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="slider"]
+margin_top = 76.0
+margin_right = 600.0
+margin_bottom = 127.0
+size_flags_vertical = 3
+
+[node name="min" type="Label" parent="slider/HBoxContainer"]
+margin_right = 27.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 15, 7 )
+size_flags_vertical = 0
+text = "min"
+uppercase = true
+
+[node name="min_value" type="Label" parent="slider/HBoxContainer"]
+margin_left = 31.0
+margin_top = 18.0
+margin_right = 65.0
+margin_bottom = 32.0
+text = "value"
+
+[node name="max" type="Label" parent="slider/HBoxContainer"]
+margin_left = 69.0
+margin_right = 562.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 15, 7 )
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "max"
+align = 2
+uppercase = true
+
+[node name="max_value" type="Label" parent="slider/HBoxContainer"]
+margin_left = 566.0
+margin_top = 18.0
+margin_right = 600.0
+margin_bottom = 32.0
+text = "value"
+
+[node name="slider" type="HSlider" parent="slider"]
+visible = false
+margin_top = 81.0
+margin_right = 600.0
+margin_bottom = 97.0
+rect_pivot_offset = Vector2( 150, 8 )
+min_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="enter" type="Label" parent="."]
+margin_left = 896.211
+margin_top = 560.526
+margin_right = 983.211
+margin_bottom = 592.526
+custom_fonts/font = ExtResource( 5 )
+text = "ENTER"
+align = 1
+
+[node name="HTTPRequest2" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+[connection signal="gui_input" from="Background" to="." method="_on_Background_gui_input"]
+[connection signal="text_entered" from="text_input/input" to="." method="_on_input_text_entered"]
+[connection signal="value_changed" from="slider/slider" to="." method="_on_slider_value_changed"]
+[connection signal="request_completed" from="HTTPRequest2" to="." method="_on_HTTPRequest2_request_completed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
