@@ -3,5 +3,6 @@
 [ext_resource path="res://Sansumi-Regular.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 45
+size = 35
+extra_spacing_bottom = 15
 font_data = ExtResource( 1 )
