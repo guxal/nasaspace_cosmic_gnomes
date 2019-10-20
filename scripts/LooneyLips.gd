@@ -78,7 +78,7 @@ func is_action_enter():
 		var val = slider.value
 		star_data["mass"] = str(val)
 		index += 1
-			
+		star_data["type"] = get_star(int(star_data["mass"]))
 		mode = "in"
 		t = 0
 		#create temperature
@@ -163,7 +163,7 @@ func set_text():
 	if index == 1:
 		input.visible = true
 	if index > 1:
-		displayText.text = messages[index].replace("[Star-Name]", star_data["name"])
+		displayText.text = messages[index].replace("[Star-Name]", star_data["name"]) 
 		input.visible = false
 	if index > 2:
 		NAME_STAR_DB.visible = false
