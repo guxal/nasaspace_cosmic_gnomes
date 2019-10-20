@@ -8,7 +8,8 @@ var stars = {
 	"giants": preload("res://scenes//giants.tscn"),
 	"subgiants": preload("res://scenes//subgiants.tscn"),
 	"dwarfs": preload("res://scenes//dwarfs.tscn"),
-	"white dwarfs": preload("res://scenes//white dwarfs.tscn")
+	"white dwarfs": preload("res://scenes//white dwarfs.tscn"),
+	"no name": preload("res://scenes//white dwarfs.tscn")
 }
 
 var nobel 
@@ -33,7 +34,8 @@ func create_star(d):
 	$PanelContainer/VBoxContainer/luminosity.text += d["luminosity"] + " Lumens"
 	$PanelContainer/VBoxContainer/radius.text += d["radius"] + " Sun Radius"
 	$PanelContainer/VBoxContainer/type.text += d["type"]
-	
+	$info2/label.text = "[Star-Name] has been borned!\nBut, it seems lonely in the massive nothingness...\nLet’s create a planet based on [Star-Name] so it’s lonely\nnever more"
+	$info2/label.text = $info2/label.text.replace("[Star-Name]", d["name"])
 	var Star = stars[d["type"]]
 	self.add_child(Star.instance())
 	

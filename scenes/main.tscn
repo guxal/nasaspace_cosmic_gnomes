@@ -26,10 +26,10 @@ stream = ExtResource( 3 )
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 editor/display_folded = true
-margin_left = 77.0
-margin_top = 46.0
-margin_right = 339.0
-margin_bottom = 231.0
+margin_left = 34.0
+margin_top = 29.0
+margin_right = 296.0
+margin_bottom = 214.0
 size_flags_horizontal = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
@@ -82,3 +82,32 @@ margin_bottom = 171.0
 custom_fonts/font = ExtResource( 4 )
 text = "Star Type: "
 valign = 1
+
+[node name="info2" type="PanelContainer" parent="."]
+editor/display_folded = true
+margin_left = 576.0
+margin_top = 16.31
+margin_right = 1017.0
+margin_bottom = 103.31
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="label" type="Label" parent="info2"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 434.0
+margin_bottom = 80.0
+custom_fonts/font = ExtResource( 4 )
+text = "[Star-Name] has been borned!
+But, it seems lonely in the massive nothingness...
+Let’s create a planet based on [Star-Name]
+ so it’s lonely never more"
+
+[node name="enter" type="Label" parent="."]
+margin_left = 894.18
+margin_top = 551.799
+margin_right = 968.18
+margin_bottom = 567.799
+custom_fonts/font = ExtResource( 4 )
+text = "[ENTER]"
