@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/dagobah.obj-5af3c6ae8e5b5ff66f31dafb38ae93c1.mesh"
+
+[deps]
+
+files=[ "res://.import/dagobah.obj-5af3c6ae8e5b5ff66f31dafb38ae93c1.mesh" ]
+
+source_file="res://textures/proxima Cen b/dagobah.obj"
+dest_files=[ "res://.import/dagobah.obj-5af3c6ae8e5b5ff66f31dafb38ae93c1.mesh", "res://.import/dagobah.obj-5af3c6ae8e5b5ff66f31dafb38ae93c1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

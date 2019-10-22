@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/corsucant-01.obj-6b2bbd7af5ece2480831bd7abf37a5ef.mesh"
+
+[deps]
+
+files=[ "res://.import/corsucant-01.obj-6b2bbd7af5ece2480831bd7abf37a5ef.mesh" ]
+
+source_file="res://textures/GJ 1061 b/corsucant-01.obj"
+dest_files=[ "res://.import/corsucant-01.obj-6b2bbd7af5ece2480831bd7abf37a5ef.mesh", "res://.import/corsucant-01.obj-6b2bbd7af5ece2480831bd7abf37a5ef.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
